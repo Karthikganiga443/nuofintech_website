@@ -68,7 +68,7 @@ const Home = () => {
         <div className="absolute bottom-20 left-10 w-48 h-48 bg-gradient-to-tr from-highlight/15 to-accent/5 rounded-full blur-2xl floating" style={{ animationDelay: "2s" }} />
         
         <div className="container-custom relative z-10">
-          <div className="max-w-4xl">
+          <div className="max-w-6xl">
             {/* Label */}
             <AnimatedSection delay={0}>
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent text-sm font-medium mb-8">
