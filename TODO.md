@@ -1,0 +1,3 @@
+- [x] Fix TypeScript errors in src/components/ui/resizable.tsx by updating imports to named imports for react-resizable-panels
+- [x] Fix TypeScript errors in src/components/ui/chart.tsx by correcting the prop types for ChartTooltipContent and ChartLegendContent
+- [x] Test the build locally to ensure errors are resolved
