@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Palette, Code, Lightbulb, Wrench, Shield, BarChart, ArrowRight, Check } from "lucide-react";
+import { Palette, Code, Lightbulb, Wrench, Shield, BarChart, ArrowRight, Check, CalculatorIcon} from "lucide-react";
 
 const services = [
   {
@@ -23,7 +23,7 @@ const services = [
       "Prototyping & Testing",
       "Brand Identity",
     ],
-    startingFrom: "From $15,000",
+    startingFrom: "",
   },
   {
     id: "development",
@@ -37,7 +37,7 @@ const services = [
       "Cloud Infrastructure",
       "Performance Optimization",
     ],
-    startingFrom: "From $25,000",
+    startingFrom: "",
   },
   {
     id: "consulting",
@@ -51,7 +51,7 @@ const services = [
       "Process Optimization",
       "Digital Roadmapping",
     ],
-    startingFrom: "From $3,000/week",
+    startingFrom: "",
   },
   {
     id: "maintenance",
@@ -65,7 +65,7 @@ const services = [
       "Performance Tuning",
       "Feature Enhancements",
     ],
-    startingFrom: "From $2,000/month",
+    startingFrom: "",
   },
   {
     id: "security",
@@ -79,7 +79,7 @@ const services = [
       "Security Training",
       "Incident Response",
     ],
-    startingFrom: "From $5,000",
+    startingFrom: "",
   },
   {
     id: "analytics",
@@ -93,8 +93,22 @@ const services = [
       "Predictive Analytics",
       "Data Visualization",
     ],
-    startingFrom: "From $12,000",
+    startingFrom: "",
   },
+  {
+"id": "financial-design",
+"icon": CalculatorIcon,
+"title": "Financial Product Design",
+"description": "Designing secure, compliant fintech experiences that drive financial innovation.",
+"details": [
+"Fintech User Research & Strategy",
+"UX/UI for Banking Platforms",
+"Microfinance Design Systems",
+"Prototyping & Compliance Testing",
+"Financial Brand Identity"
+],
+"startingFrom": "",
+}
 ];
 
 const process = [
