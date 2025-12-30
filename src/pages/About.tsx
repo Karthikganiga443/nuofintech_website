@@ -65,7 +65,7 @@ const About = () => {
             <span className="text-xs uppercase tracking-widest text-accent font-medium">About Us</span>
           </AnimatedSection>
           
-          <div className="mt-6 max-w-4xl">
+          <div className="mt-6 max-w-5xl">
             <RevealText 
               as="h1" 
               className="display-text font-display font-bold text-primary"

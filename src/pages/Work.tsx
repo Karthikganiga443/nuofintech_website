@@ -107,11 +107,11 @@ const Work = () => {
                   className="block w-full text-left group"
                 >
                   <div className="relative overflow-hidden rounded-2xl bg-card border border-border card-lift">
-                    <div className="img-zoom">
+                    <div className="img-zoom aspect-[16/10] overflow-hidden">
                       <img
                         src={project.image}
                         alt={project.title}
-                        className="w-full h-auto object-cover"
+                        className="w-full h-full object-cover"
                       />
                       {/* Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -162,7 +162,7 @@ const Work = () => {
 
       {/* Project Modal */}
       <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-0">
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-1">
           {selectedProject && (
             <>
               <div className="relative">

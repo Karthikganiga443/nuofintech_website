@@ -119,7 +119,7 @@ const Services = () => {
               as="h1" 
               className="display-text font-display font-bold text-primary"
             >
-              Everything you need to succeed digitally
+              From Data Strategy to Deployment
             </RevealText>
           </div>
 
@@ -177,54 +177,65 @@ const Services = () => {
                       </div>
                     </AccordionContent> */}
                     <AccordionContent className="pb-8">
-                      <div className="flex flex-col lg:flex-row gap-12 lg:items-start pl-0 md:pl-[68px] pt-4">
-                        
-                        {/* Left Side: Content Wrapper */}
-                        <div className="flex-[1.2] space-y-6"> 
-                          <div className="space-y-4">
-                            {/* Only show sub_description if it exists to avoid empty space */}
-                            {service.sub_description && (
-                              <p className="text-muted-foreground leading-relaxed">
-                                {service.sub_description}
-                              </p>
-                            )}
-                          </div>
-                          
-                          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-4 gap-y-3">
-                            {service.details.map((detail, i) => (
-                              <li key={i} className="flex items-start gap-3 text-foreground font-medium group">
-                                <Check size={18} className="text-accent mt-1 flex-shrink-0 transition-transform group-hover:scale-110" />
-                                <span className="text-[15px]">{detail}</span>
-                              </li>
-                            ))}
-                          </ul>
+  {/* The container is a flex-col on mobile and row on desktop */}
+  <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 lg:items-start pl-0 md:pl-[68px] pt-4">
+    
+    {/* 1. IMAGE: Order 1 on mobile, Order 2 (right side) on desktop */}
+    <div className="flex-1 w-full lg:max-w-[45%] order-1 lg:order-2">
+      <div className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/5">
+        <img 
+          src={service.image} 
+          alt={service.title}
+          className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent pointer-events-none" />
+      </div>
+    </div>
 
-                          <div className="flex items-center justify-between pt-8 border-t border-border/60">
-                            
-                            <Link 
-                              to="/contact" 
-                              className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-accent transition-all group"
-                            >
-                              Get a Quote
-                              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                            </Link>
-                          </div>
-                        </div>
+    {/* 2. CONTENT: Order 2 on mobile, Order 1 (left side) on desktop */}
+    <div className="flex-[1.2] space-y-6 order-2 lg:order-1">
+      <div className="space-y-4">
+        {service.sub_description && (
+          <p className="text-muted-foreground leading-relaxed">
+            {service.sub_description}
+          </p>
+        )}
+      </div>
 
-                        {/* Right Side: Image with refined scaling */}
-                        <div className="flex-1 w-full lg:max-w-[45%]">
-                          <div className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/5">
-                            <img 
-                              src={service.image} 
-                              alt={service.title}
-                              className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent pointer-events-none" />
-                          </div>
-                        </div>
+      <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-4 gap-y-3">
+        {service.details.map((detail, i) => (
+          <li key={i} className="flex items-start gap-3 text-foreground font-medium group">
+            <Check size={18} className="text-accent mt-1 flex-shrink-0 transition-transform group-hover:scale-110" />
+            <span className="text-[15px]">{detail}</span>
+          </li>
+        ))}
+      </ul>
 
-                      </div>
-                    </AccordionContent>
+      {/* "Get a Quote" - Laptop Version: Attached to bottom of content on big screens */}
+      <div className="hidden lg:flex items-center justify-between pt-8 border-t border-border/60">
+        <Link 
+          to="/contact" 
+          className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-accent transition-all group"
+        >
+          Get a Quote
+          <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+        </Link>
+      </div>
+    </div>
+
+    {/* 3. GET A QUOTE: Order 3 on mobile, Hidden on laptop (because it's included above) */}
+    <div className="order-3 lg:hidden flex items-center justify-start pt-4 border-t border-border/60">
+      <Link 
+        to="/contact" 
+        className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-accent transition-all group"
+      >
+        Get a Quote
+        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+      </Link>
+    </div>
+    
+  </div>
+</AccordionContent>
                   </AccordionItem>
                 </AnimatedSection>
               ))}

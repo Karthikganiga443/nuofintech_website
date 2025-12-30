@@ -79,13 +79,13 @@ const Home = () => {
 
             {/* Headline */}
             <div className="mb-8">
-              <RevealText 
-                as="h1" 
-                className="display-text font-display font-bold text-primary"
-              >
-                AI‑Native Digital Solutions That Drive Growth
-              </RevealText>
-            </div>
+  <RevealText 
+    as="h1" 
+    className="display-text font-display font-bold text-primary leading-[1.1] tracking-tight"
+  >
+    Turning Complex Data into Actionable Intelligence
+  </RevealText>
+</div>
 
             {/* Subtitle */}
             <AnimatedSection delay={200}>
