@@ -12,14 +12,14 @@ import {
 } from "@/components/ui/dialog";
 import { ArrowRight, ExternalLink } from "lucide-react";
 
-const categories = ["All", "Web Apps", "Mobile", "Branding", "E-Commerce", "Fintech", "AI & Analytics", "Prediction Markets"];
+const categories = ["All", "Web Apps", "Fintech", "Prediction Markets"];
 
 
 const projects = [
   {
 id: 1,
 title: "Applite - XGen Banking Solution",
-category: "Fintech",
+category: ["Fintech","Web Apps"],
 image: "https://nuofintech.com/wp-content/uploads/2021/10/n1.jpg",
 client: "MicroFinance",
 year: "2024",
@@ -31,7 +31,7 @@ technologies: ["Microservices", "API-First", "Cloud & On-Premise"]
   {
   id: 2,
   title: "PredixArena – Where Knowledge Meets Opportunity",
-  category: "Prediction Markets",
+  category: ["Prediction Markets", "Web Apps"],
   image: "https://www.xcritical.com/wp-content/uploads/feed_images/prediction-markets-what-are-they-types-examples-img-2-768x473.webp",
   client: "Community Platform",
   year: "2025",
@@ -47,7 +47,7 @@ const Work = () => {
 
   const filteredProjects = activeFilter === "All" 
     ? projects 
-    : projects.filter(p => p.category === activeFilter);
+    : projects.filter(p => p.category.includes(activeFilter));
 
   return (
     <Layout>
@@ -123,7 +123,7 @@ const Work = () => {
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs font-medium text-accent">{project.category}</span>
+                        <span className="text-xs font-medium text-accent">{project.category[0]}</span>
                         <span className="text-xs text-muted-foreground">· {project.year}</span>
                       </div>
                       <h3 className="font-display text-xl font-bold text-primary group-hover:text-accent transition-colors">

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -42,7 +43,7 @@ const Navbar = () => {
           <Link 
             to="/" 
             className="font-display text-xl lg:text-2xl font-bold text-primary tracking-tight"
-          >
+          > <img src={logo} alt="NUO Logo" className="inline-block h-8 w-auto mr-2 -mt-1"/>
             NUO<span className="text-accent">.</span>
           </Link>
 

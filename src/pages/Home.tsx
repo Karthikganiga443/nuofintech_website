@@ -83,14 +83,15 @@ const Home = () => {
                 as="h1" 
                 className="display-text font-display font-bold text-primary"
               >
-                We craft digital experiences that drive growth
+                AI‑Native Digital Solutions That Drive Growth
               </RevealText>
             </div>
 
             {/* Subtitle */}
             <AnimatedSection delay={200}>
               <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed mb-10">
-                A premium digital agency helping forward-thinking businesses build products that matter.
+                
+                Design and scale AI‑powered platforms with Nuo Tech
               </p>
             </AnimatedSection>
 

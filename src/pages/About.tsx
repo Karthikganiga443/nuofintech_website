@@ -70,7 +70,7 @@ const About = () => {
               as="h1" 
               className="display-text font-display font-bold text-primary"
             >
-              Transforming Fintech through AI Innovation
+              From Algorithms to Real-World Solutions
             </RevealText>
           </div>
         </div>

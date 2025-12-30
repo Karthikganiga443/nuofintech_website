@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Github } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -9,7 +10,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="font-display text-2xl font-bold text-primary-foreground">
-              Nuo<span className="text-accent">.</span>
+            <img src={logo} alt="NUO Logo" className="inline-block h-8 w-auto mr-2 -mt-1"/>
+              NUO<span className="text-accent">.</span>
             </Link>
             <p className="text-sm text-primary-foreground/70 mt-4 max-w-xs leading-relaxed">
               Building tomorrow's digital solutions with precision engineering and creative thinking.

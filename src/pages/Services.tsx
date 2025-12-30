@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import AnimatedSection from "@/components/effects/AnimatedSection";
 import RevealText from "@/components/effects/RevealText";
+import productDesignImage from "@/assets/Product-design.png";
 import {
   Accordion,
   AccordionContent,
@@ -16,6 +17,7 @@ const services = [
     icon: Palette,
     title: "Product Design",
     description: "Crafting intuitive experiences that users love.",
+    sub_description: "In an era of rapid AI integration, intuitive interfaces are the bridge between powerful technology and human adoption. We craft seamless, accessible, and high-performance digital experiences that reduce friction, ensure compliance, and turn first-time users into lifelong advocates",
     details: [
       "User Research & Strategy",
       "UX/UI Design",
@@ -23,6 +25,7 @@ const services = [
       "Prototyping & Testing",
       "Brand Identity",
     ],
+    image: productDesignImage,
     startingFrom: "",
   },
   {
@@ -30,6 +33,7 @@ const services = [
     icon: Code,
     title: "Development",
     description: "Building robust applications with modern tech.",
+    sub_description: "Code is the foundation of digital reliability. We specialize in engineering high-performance systems that are secure by design and ready for AI integration. Our development team transforms complex logic into clean, maintainable code, ensuring your platform can handle the demands of a global fintech landscape without compromising on speed or security",
     details: [
       "Web Applications",
       "Mobile Apps (iOS & Android)",
@@ -37,6 +41,7 @@ const services = [
       "Cloud Infrastructure",
       "Performance Optimization",
     ],
+    image: "https://media.licdn.com/dms/image/v2/D4D12AQHXzB9CVgPwpw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1704385797552?e=2147483647&v=beta&t=lT2oBKnW0r-vBnqNZTuleqAR4Hkl3LC2sGSmDM_vdbI",
     startingFrom: "",
   },
   {
@@ -44,6 +49,7 @@ const services = [
     icon: Lightbulb,
     title: "Strategy & Consulting",
     description: "Guiding your digital transformation journey.",
+    sub_description: "Innovation without a roadmap is just noise. We provide the strategic clarity needed to navigate the intersection of finance and artificial intelligence. Our consultants work as your partners to assess legacy systems, identify high-impact AI opportunities, and build a sustainable digital roadmap that ensures your organization remains competitive, compliant, and ready for future shifts in the global market",
     details: [
       "Technology Assessment",
       "Architecture Planning",
@@ -51,34 +57,7 @@ const services = [
       "Process Optimization",
       "Digital Roadmapping",
     ],
-    startingFrom: "",
-  },
-  {
-    id: "maintenance",
-    icon: Wrench,
-    title: "Ongoing Support",
-    description: "Keeping your systems running at peak performance.",
-    details: [
-      "24/7 Monitoring",
-      "Bug Fixes & Updates",
-      "Security Patches",
-      "Performance Tuning",
-      "Feature Enhancements",
-    ],
-    startingFrom: "",
-  },
-  {
-    id: "security",
-    icon: Shield,
-    title: "Security Audits",
-    description: "Protecting your business from digital threats.",
-    details: [
-      "Penetration Testing",
-      "Code Review",
-      "Compliance Assessment",
-      "Security Training",
-      "Incident Response",
-    ],
+    image: "https://media.licdn.com/dms/image/v2/D4D12AQE2DNcNdUu5pg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1655881320227?e=2147483647&v=beta&t=8GWx6XurkTPfIV1guM1qakzZlMnNa-hcmFDIeBFiz5Y",
     startingFrom: "",
   },
   {
@@ -86,6 +65,7 @@ const services = [
     icon: BarChart,
     title: "Data & Analytics",
     description: "Transforming data into actionable insights.",
+    sub_description: "Our Data Analytics discipline focuses on the entire lifecycle of information—from collection and organization to advanced storage and extraction. By leveraging specialized tools and the expertise of our Subject Matter Experts (SMEs), Nuo FinTech helps you navigate the complexities of your data journey to uncover actionable insights that drive growth.",
     details: [
       "Data Warehouse Design",
       "BI Dashboards",
@@ -93,22 +73,25 @@ const services = [
       "Predictive Analytics",
       "Data Visualization",
     ],
+    image: "https://nuofintech.com/wp-content/uploads/2021/10/n3.jpg",
     startingFrom: "",
   },
   {
-"id": "financial-design",
-"icon": CalculatorIcon,
-"title": "Financial Product Design",
-"description": "Designing secure, compliant fintech experiences that drive financial innovation.",
-"details": [
-"Fintech User Research & Strategy",
-"UX/UI for Banking Platforms",
-"Microfinance Design Systems",
-"Prototyping & Compliance Testing",
-"Financial Brand Identity"
-],
-"startingFrom": "",
-}
+    id: "financial-design",
+    icon: CalculatorIcon,
+    title: "Financial Product Design",
+    description: "Designing secure, compliant fintech experiences that drive financial innovation.",
+    sub_description: "In the world of finance, trust is the primary currency. We blend high-level security requirements with frictionless user journeys to create products that feel both safe and sophisticated. By integrating regulatory compliance into the very fabric of our design process, we help banking and microfinance institutions launch platforms that are as intuitive as they are legally robust.",
+    details: [
+    "Fintech User Research & Strategy",
+    "UX/UI for Banking Platforms",
+    "Microfinance Design Systems",
+    "Prototyping & Compliance Testing",
+    "Financial Brand Identity"
+    ],
+    image: "https://www.europeanceo.com/wp-content/uploads/2019/03/Thales_technological_collaboration.jpg",
+    startingFrom: "",
+  },  
 ];
 
 const process = [
@@ -170,7 +153,7 @@ const Services = () => {
                         </div>
                       </div>
                     </AccordionTrigger>
-                    <AccordionContent className="pb-8">
+                    {/* <AccordionContent className="pb-8">
                       <div className="pl-0 md:pl-[68px]">
                         <p className="text-muted-foreground mb-6 md:hidden">{service.description}</p>
                         <ul className="space-y-3 mb-6">
@@ -191,6 +174,55 @@ const Services = () => {
                             <ArrowRight size={14} />
                           </Link>
                         </div>
+                      </div>
+                    </AccordionContent> */}
+                    <AccordionContent className="pb-8">
+                      <div className="flex flex-col lg:flex-row gap-12 lg:items-start pl-0 md:pl-[68px] pt-4">
+                        
+                        {/* Left Side: Content Wrapper */}
+                        <div className="flex-[1.2] space-y-6"> 
+                          <div className="space-y-4">
+                            {/* Only show sub_description if it exists to avoid empty space */}
+                            {service.sub_description && (
+                              <p className="text-muted-foreground leading-relaxed">
+                                {service.sub_description}
+                              </p>
+                            )}
+                          </div>
+                          
+                          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-x-4 gap-y-3">
+                            {service.details.map((detail, i) => (
+                              <li key={i} className="flex items-start gap-3 text-foreground font-medium group">
+                                <Check size={18} className="text-accent mt-1 flex-shrink-0 transition-transform group-hover:scale-110" />
+                                <span className="text-[15px]">{detail}</span>
+                              </li>
+                            ))}
+                          </ul>
+
+                          <div className="flex items-center justify-between pt-8 border-t border-border/60">
+                            
+                            <Link 
+                              to="/contact" 
+                              className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-accent transition-all group"
+                            >
+                              Get a Quote
+                              <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                            </Link>
+                          </div>
+                        </div>
+
+                        {/* Right Side: Image with refined scaling */}
+                        <div className="flex-1 w-full lg:max-w-[45%]">
+                          <div className="relative rounded-3xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/5">
+                            <img 
+                              src={service.image} 
+                              alt={service.title}
+                              className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-primary/20 via-transparent to-transparent pointer-events-none" />
+                          </div>
+                        </div>
+
                       </div>
                     </AccordionContent>
                   </AccordionItem>
